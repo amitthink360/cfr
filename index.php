@@ -9,9 +9,10 @@ function get($url, $params=array()) {
    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
    $response = curl_exec($ch);
    curl_close($ch);
-   return json_decode($response);
+   return $response;
 } 
-echo $_GET['code'];die;
-//$link = get('https://aptrack.us/get_link.php', array('code'=> $_GET['code'],'ip'=> $_SERVER['REMOTE_ADDR']));
-//header("Location:".$link->url);
+
+$code = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+$link = get('http://147.182.178.125/'.$code);
+header("Location:".$link);
 ?>
