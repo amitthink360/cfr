@@ -14,8 +14,8 @@ function get($url, $params=array()) {
 
 $code = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 $link = get('http://147.182.178.125/'.$code);
-echo $link; die;
-if(isset($link)){
+
+if(isset($code) && strlen($code) < 10){
 	header("Location:".$link);
 }else{
 	echo "Coming Soon";	
