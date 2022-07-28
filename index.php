@@ -17,6 +17,6 @@ $link = get('http://147.182.178.125/'.$code);
 if(isset($code) && strlen($code) < 10){
 	header("Location:".$link);
 }else{
-	echo "<h1 style='margin: 0 auto;position: absolute;top: 45%;left: 38%;color:#008000;'>Coming Soon<br><span style='font-size:18px;color:#000000;'>Pardon our mess were under construction</span></h1>";	
+	echo "<h1 style='margin: 0 auto;position: absolute;top: 45%;left: 38%;color:#008000;text-align: center;'>Coming Soon<br><span style='font-size:18px;color:#000000;'>Pardon our mess were under construction</span></h1>";	
 }
 ?>
