@@ -13,9 +13,9 @@ function get($url, $params=array()) {
 } 
 
 $code = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+$link = get('http://147.182.178.125/'.$code);
 
 if(isset($code)){
-	$link = get('http://147.182.178.125/'.$code);
 	header("Location:".$link);
 }else{
 	echo "Coming Soon";	
