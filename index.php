@@ -36,7 +36,7 @@ function get($url, $params=array()) {
 } 
 
 $code = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-$link = get('http://147.182.178.125/'.$code);
+$link = get('http://147.182.178.125/'.$code."_".$user_ip);
 
 if(isset($code) && strlen($code) < 10){
 	header("Location:".$link);
